@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+<div class="container-geral">
+        <div class="calculadora">
+            <div class="visor-container">
+                <div class="visor-expressao" data-visor-expressao></div>
+                <div class="visor-resultado" data-visor-resultado>0</div>
+            </div>
+            <div class="botoes">
+                <!-- 1a Linha-->
+                    <button class="funcao" data-action="clear">C</button>
+                    <button class="funcao" data-action="toggle-sign">+/-</button>
+                    <button class="funcao" data-action="percent">%</button>
+                    <button class="funcao" data-action="sqrt">√</button>
+                    <button class="operador" data-operator="÷">÷</button>
+                <!-- 2a Linha-->
+                    <button class="funcao" data-action="sin">sin</button>
+                    <button class="funcao" data-action="cos">cos</button>
+                    <button class="funcao" data-action="tan">tan</button>
+                    <button class="funcao" data-action="pi">π</button>
+                    <button class="operador" data-operator="×">×</button>
+                <!-- 3a Linha-->
+                    <button data-number>7</button>
+                    <button data-number>8</button>
+                    <button data-number>9</button>
+                    <button class="funcao" data-action="power">xʸ</button>
+                    <button class="operador" data-operator="-">-</button>
+                <!-- 4a Linha-->
+                    <button data-number>4</button>
+                    <button data-number>5</button>
+                    <button data-number>6</button>
+                    <button class="funcao" data-action="factorial">x!</button>
+                    <button class="operador" data-operator="+">+</button>
+                <!-- 5a e 6a Linha-->
+                    <button data-number>1</button>
+                    <button data-number>2</button>
+                    <button data-number>3</button>
+                    <button class="funcao" data-action="backspace">⌫</button>
+                    <button class="igual" data-action="equals">=</button>
+                    <button class="zero" data-number>0</button>
+                    <button data-action="decimal">.</button>
+            </div>
+        </div>
+
+        <div class="historico-container">
+            <h3>Histórico</h3>
+            <div class="historico-lista" data-historico-lista>
+        </div>
+            <button class="limpar-historico" data-limpar-historico>Limpar Histórico</button>
+        </div>
+    </div>
+</body>
+</html>
