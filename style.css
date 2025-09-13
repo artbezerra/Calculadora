@@ -1,0 +1,189 @@
+        :root {
+            --bg-color: #1e1e1e;
+            --calculator-bg: #2d2d2d;
+            --display-bg: #1a1a1a;
+            --history-bg: #252525;
+            --text-color: #ffffff;
+            --operator-btn-bg: #ff9f0a;
+            --function-btn-bg: #a6a6a6;
+            --number-btn-bg: #3e3e3e;
+            --text-dark: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container-geral {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .calculadora {
+            background-color: var(--calculator-bg);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .visor-container {
+            background-color: var(--display-bg);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: right;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .visor-expressao {
+            color: #a6a6a6;
+            font-size: 1.2rem;
+            min-height: 25px;
+        }
+
+        .visor-resultado {
+            font-size: 3rem;
+            font-weight: 700;
+            min-height: 50px;
+        }
+
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        button {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            padding: 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background-color: var(--number-btn-bg);
+            color: var(--text-color);
+        }
+
+        button:hover {
+            filter: brightness(1.2);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .botoes .operador {
+            background-color: var(--operator-btn-bg);
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .botoes .funcao {
+            background-color: var(--function-btn-bg);
+            color: var(--text-dark);
+        }
+
+        .botoes .igual {
+            background-color: var(--operator-btn-bg);
+            grid-column: span 2;
+        }
+        
+        .botoes .zero {
+            grid-column: span 2;
+        }
+        
+        .historico-container {
+            background-color: var(--history-bg);
+            padding: 20px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .historico-container h3 {
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .historico-lista {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding-right: 10px; 
+        }
+        
+       .historico-lista::-webkit-scrollbar {
+            width: 8px;
+        }
+        .historico-lista::-webkit-scrollbar-track {
+            background: #2d2d2d;
+            border-radius: 10px;
+        }
+        .historico-lista::-webkit-scrollbar-thumb {
+            background: #555;
+            border-radius: 10px;
+        }
+        .historico-lista::-webkit-scrollbar-thumb:hover {
+            background: #777;
+        }
+
+        .historico-item {
+            margin-bottom: 15px;
+            text-align: right;
+            padding: 10px;
+            border-radius: 8px;
+            background: #333;
+        }
+
+        .historico-item .expressao {
+            color: #a6a6a6;
+            font-size: 0.9rem;
+        }
+
+        .historico-item .resultado {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .limpar-historico {
+            margin-top: 15px;
+            background-color: #c0392b;
+            color: white;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        
+        /* Espaco dedicado a responsividade */
+        @media (max-width: 840px) {
+            .container-geral {
+                flex-direction: column;
+                align-items: center;
+            }
+            .calculadora, .historico-container {
+                max-width: 500px;
+            }
+            .historico-container {
+                max-height: 300px;
+            }
+        }
