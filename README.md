@@ -1,7 +1,6 @@
 # Scientific Calculator
 
 This project was developed as a learning and portfolio tool, demonstrating front-end development skills. The design was inspired by DuckDuckGo's calculator.
-Screenshot
 
 # Key Features
 ### Basic Operations:
