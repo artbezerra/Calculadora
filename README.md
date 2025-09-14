@@ -34,9 +34,9 @@ Dark theme with colored buttons for easy identification of functions.
 # Technologies Used
 The project was built from scratch using only fundamental web technologies:
 
-HTML: Used for the semantic structure of all calculator elements.
-CSS: Responsible for all styling, using Flexbox and Grid Layout to create a robust and responsive layout.
-JavaScript: The brain of the application, handling
+- HTML: Used for the semantic structure of all calculator elements.
+- CSS: Responsible for all styling, using Flexbox and Grid Layout to create a robust and responsive layout.
+- JavaScript: The brain of the application, handling
 
 # How to Run
 
